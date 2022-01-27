@@ -1,0 +1,323 @@
+terraform_version = "1.1.4"
+
+planned_values = {
+	"outputs": {},
+	"resources": {
+		"google_filestore_instance.instance": {
+			"address":        "google_filestore_instance.instance",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "instance",
+			"provider_name":  "registry.terraform.io/hashicorp/google-beta",
+			"tainted":        false,
+			"type":           "google_filestore_instance",
+			"values": {
+				"description": null,
+				"file_shares": [
+					{
+						"capacity_gb":        2660,
+						"name":               "share1",
+						"nfs_export_options": [],
+					},
+				],
+				"labels":   null,
+				"location": "us-central1-b",
+				"name":     "test-instance",
+				"networks": [
+					{
+						"connect_mode": "DIRECT_PEERING",
+						"modes": [
+							"MODE_IPV4",
+						],
+						"network": "default",
+					},
+				],
+				"tier":     "PREMIUM",
+				"timeouts": null,
+			},
+		},
+	},
+}
+
+variables = {
+	"access_token": {
+		"name":  "access_token",
+		"value": "REDACTED_SENSITIVE",
+	},
+}
+
+resource_changes = {
+	"google_filestore_instance.instance": {
+		"address": "google_filestore_instance.instance",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"description": null,
+				"file_shares": [
+					{
+						"capacity_gb":        2660,
+						"name":               "share1",
+						"nfs_export_options": [],
+					},
+				],
+				"labels":   null,
+				"location": "us-central1-b",
+				"name":     "test-instance",
+				"networks": [
+					{
+						"connect_mode": "DIRECT_PEERING",
+						"modes": [
+							"MODE_IPV4",
+						],
+						"network": "default",
+					},
+				],
+				"tier":     "PREMIUM",
+				"timeouts": null,
+			},
+			"after_unknown": {
+				"create_time": true,
+				"etag":        true,
+				"file_shares": [
+					{
+						"nfs_export_options": [],
+					},
+				],
+				"id": true,
+				"networks": [
+					{
+						"ip_addresses": true,
+						"modes": [
+							false,
+						],
+						"reserved_ip_range": true,
+					},
+				],
+				"project": true,
+				"zone":    true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "instance",
+		"provider_name":  "registry.terraform.io/hashicorp/google-beta",
+		"type":           "google_filestore_instance",
+	},
+}
+
+output_changes = {}
+
+raw = {
+	"configuration": {
+		"provider_config": {
+			"google": {
+				"name": "google",
+			},
+			"google-beta": {
+				"expressions": {
+					"access_token": {
+						"references": [
+							"var.access_token",
+						],
+					},
+				},
+				"name": "google-beta",
+			},
+		},
+		"root_module": {
+			"resources": [
+				{
+					"address": "google_filestore_instance.instance",
+					"expressions": {
+						"file_shares": [
+							{
+								"capacity_gb": {
+									"constant_value": 2660,
+								},
+								"name": {
+									"constant_value": "share1",
+								},
+							},
+						],
+						"location": {
+							"constant_value": "us-central1-b",
+						},
+						"name": {
+							"constant_value": "test-instance",
+						},
+						"networks": [
+							{
+								"modes": {
+									"constant_value": [
+										"MODE_IPV4",
+									],
+								},
+								"network": {
+									"constant_value": "default",
+								},
+							},
+						],
+						"tier": {
+							"constant_value": "PREMIUM",
+						},
+					},
+					"mode":                "managed",
+					"name":                "instance",
+					"provider_config_key": "google-beta",
+					"schema_version":      1,
+					"type":                "google_filestore_instance",
+				},
+			],
+			"variables": {
+				"access_token": {
+					"description": "access token",
+					"sensitive":   true,
+				},
+			},
+		},
+	},
+	"format_version": "1.0",
+	"planned_values": {
+		"root_module": {
+			"resources": [
+				{
+					"address":        "google_filestore_instance.instance",
+					"mode":           "managed",
+					"name":           "instance",
+					"provider_name":  "registry.terraform.io/hashicorp/google-beta",
+					"schema_version": 1,
+					"sensitive_values": {
+						"file_shares": [
+							{
+								"nfs_export_options": [],
+							},
+						],
+						"networks": [
+							{
+								"ip_addresses": [],
+								"modes": [
+									false,
+								],
+							},
+						],
+					},
+					"type": "google_filestore_instance",
+					"values": {
+						"description": null,
+						"file_shares": [
+							{
+								"capacity_gb":        2660,
+								"name":               "share1",
+								"nfs_export_options": [],
+							},
+						],
+						"labels":   null,
+						"location": "us-central1-b",
+						"name":     "test-instance",
+						"networks": [
+							{
+								"connect_mode": "DIRECT_PEERING",
+								"modes": [
+									"MODE_IPV4",
+								],
+								"network": "default",
+							},
+						],
+						"tier":     "PREMIUM",
+						"timeouts": null,
+					},
+				},
+			],
+		},
+	},
+	"resource_changes": [
+		{
+			"address": "google_filestore_instance.instance",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"description": null,
+					"file_shares": [
+						{
+							"capacity_gb":        2660,
+							"name":               "share1",
+							"nfs_export_options": [],
+						},
+					],
+					"labels":   null,
+					"location": "us-central1-b",
+					"name":     "test-instance",
+					"networks": [
+						{
+							"connect_mode": "DIRECT_PEERING",
+							"modes": [
+								"MODE_IPV4",
+							],
+							"network": "default",
+						},
+					],
+					"tier":     "PREMIUM",
+					"timeouts": null,
+				},
+				"after_sensitive": {
+					"file_shares": [
+						{
+							"nfs_export_options": [],
+						},
+					],
+					"networks": [
+						{
+							"ip_addresses": [],
+							"modes": [
+								false,
+							],
+						},
+					],
+				},
+				"after_unknown": {
+					"create_time": true,
+					"etag":        true,
+					"file_shares": [
+						{
+							"nfs_export_options": [],
+						},
+					],
+					"id": true,
+					"networks": [
+						{
+							"ip_addresses": true,
+							"modes": [
+								false,
+							],
+							"reserved_ip_range": true,
+						},
+					],
+					"project": true,
+					"zone":    true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "instance",
+			"provider_name": "registry.terraform.io/hashicorp/google-beta",
+			"type":          "google_filestore_instance",
+		},
+	],
+	"terraform_version": "1.1.4",
+	"variables": {
+		"access_token": {
+			"value": "REDACTED_SENSITIVE",
+		},
+	},
+}
