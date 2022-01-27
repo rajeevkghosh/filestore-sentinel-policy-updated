@@ -11,7 +11,7 @@ import "tfplan-functions" as plan
 import "strings"
 import "types"
 
-# Get all GKE Instances
+# Get all Filestore Instances
 allFilestoreInstances = plan.find_resources("google_filestore_instance")
 
 violations = {}
